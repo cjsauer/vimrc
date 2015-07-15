@@ -80,6 +80,12 @@ command! W w !sudo tee % > /dev/null
 " Toggle paste mode
 set pastetoggle=<F5>
 
+" Tab settings
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=2
+set expandtab
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
