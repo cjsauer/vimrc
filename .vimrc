@@ -108,6 +108,9 @@ set expandtab
 " Always show some lines after the cursor
 set scrolloff=8
 
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Moving around
 "
@@ -163,6 +166,13 @@ set background=light
 let g:solarized_termcolors=256
 colorscheme solarized
 
+" Use the vim wildmenu for command completion
+set wildmenu
+set wildmode=longest:full,full
+
+" Ignore files in the wildmenu
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.meteor/*
+
 
 
 
@@ -182,6 +192,12 @@ let g:ctrlp_map = '<C-f>'
 
 " Show hidden files too
 let g:ctrlp_show_hidden = 1
+
+" Ignore some files when fuzzy searching
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.?(git|hg|svn|meteor|bundle)$',
+  \ 'file': '\v\.(so|swp|zip)$'
+  \ }
 
 
 

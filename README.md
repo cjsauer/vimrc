@@ -14,7 +14,7 @@
 
 ### [CtrlP.vim](https://github.com/kien/ctrlp.vim)
 
-Remapped to `<c-f>` to not conflict with YankRing
+Remapped to `<c-f>` to not conflict with YankRing. Also note that there are some wildcards in the `.vimrc` file that will ignore annoying directories like `.meteor`, `bundle` (when working on the .vimrc). You can add others to the regex in the `.vimrc`.
 
 ### [Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
 
