@@ -6,6 +6,7 @@
 * `<F5>` toggles paste mode
 * `:W` save file with sudo
 * `,w` quickly save a file
+* `<c-[jklh]>` fast window switching
 
 ## Included plugins
 

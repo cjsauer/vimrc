@@ -101,6 +101,12 @@ set expandtab
 " Always show some lines after the cursor
 set scrolloff=8
 
+" Faster window switching
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
