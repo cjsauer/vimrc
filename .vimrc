@@ -104,11 +104,18 @@ set expandtab
 " Always show some lines after the cursor
 set scrolloff=8
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Moving around
+"
 " Faster window switching
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
+
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
 
 
 
