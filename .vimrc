@@ -61,6 +61,9 @@ Plugin 'marijnh/tern_for_vim'
 " Works great with Tern!
 Plugin 'Valloric/YouCompleteMe'
 
+" JavaScript syntax and indent plugins
+Plugin 'pangloss/vim-javascript'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on

@@ -52,10 +52,12 @@ Fugitive shortcuts: `,gs` git status, `,gd` git diff, `,gb` git blame, `,gc` git
 
 ### [tern_for_vim](https://github.com/marijnh/tern_for_vim)
 
-[Tern](http://ternjs.net/)-based intelligent editing support. Be sure to call `npm install` in the `bundle/tern_for_vim` directory!
+### [Tern](http://ternjs.net/)-based intelligent editing support. Be sure to call `npm install` in the `bundle/tern_for_vim` directory!
 
 This is especially useful with Slava's [tern-meteor](https://github.com/Slava/tern-meteor) package. Follow [these instructions](https://github.com/Slava/tern-meteor#installation-for-vim) to get it setup.
 
-[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+### [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 
 Make sure that you install it. Follow [these instructions](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation).
+
+### [vim-javascript](https://github.com/pangloss/vim-javascript)
