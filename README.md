@@ -33,4 +33,8 @@ Fugitive shortcuts: `,gs` git status, `,gd` git diff, `,gb` git blame, `,gc` git
 
 ### [Syntastic syntax checkers](https://github.com/scrooloose/syntastic)
 
+#### Included linters
+
+* jshint2: be sure to run `npm install -g jshint`
+
 **Note** you need to install the actual syntax checkers yourself. Check the syntastic [wiki](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers) for a list.
