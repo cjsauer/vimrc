@@ -1,3 +1,7 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle plugins
+"
+"
 set nocompatible
 filetype off
 
@@ -30,9 +34,15 @@ filetype plugin indent on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Basic Configuration
+" General
 "
+" Sets how many lines of history VIM has to remember
+set history=700
+
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
 let g:mapleader = ","
@@ -40,12 +50,68 @@ let g:mapleader = ","
 " Quickly source this file
 nnoremap <leader>sv :source ~/.vimrc<return>
 
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" :W sudo saves the file 
+" (useful for handling the permission-denied error)
+command! W w !sudo tee % > /dev/null
+
+" Toggle paste mode
+set pastetoggle=<F5>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Search Options
+" 
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw 
+
+" For regular expressions turn magic on
+set magic
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" User Interface
+" 
+" Show matching brackets when text indicator is over them
+set showmatch 
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Plugin Configuration
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP Configuration
 "
 " Change the default mapping
 let g:ctrlp_map = '<C-f>'
+
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""

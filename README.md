@@ -3,6 +3,7 @@
 ## Valuable shortcuts
 
 * `,sv` sources the .vimrc file
+* `<F5>` toggles paste mode
 
 ## Included plugins
 
