@@ -30,6 +30,9 @@ Plugin 'tpope/vim-fugitive'
 " vim-commentary
 Plugin 'tpope/vim-commentary'
 
+" Color schemes!
+Plugin 'flazz/vim-colorschemes'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -105,6 +108,16 @@ set mat=2
 
 " Enable 256 colors
 set t_Co=256
+
+" Syntax highlighting
+syntax enable
+
+" Set the color scheme
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
