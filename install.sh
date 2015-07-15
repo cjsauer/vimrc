@@ -1,1 +1,2 @@
-mv ./.vimrc ..
+cp ./.vimrc ..
+vim +PluginInstall +qall
