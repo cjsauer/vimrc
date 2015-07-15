@@ -35,6 +35,8 @@ Plugin 'flazz/vim-colorschemes'
 
 " Syntastic syntax checking
 Plugin 'scrooloose/syntastic'
+" JavaScript linting
+Plugin 'Shutnik/jshint2.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -112,13 +114,13 @@ set mat=2
 " Enable 256 colors
 set t_Co=256
 
-" Set the color scheme
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
-
 " Syntax highlighting
 syntax enable
+
+" Set the color scheme
+set background=light
+let g:solarized_termcolors=256
+colorscheme solarized
 
 
 
