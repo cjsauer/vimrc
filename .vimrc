@@ -33,6 +33,9 @@ Plugin 'tpope/vim-commentary'
 " Color schemes!
 Plugin 'flazz/vim-colorschemes'
 
+" Syntastic syntax checking
+Plugin 'scrooloose/syntastic'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -167,3 +170,16 @@ nnoremap <leader>gb :Gblame<return>
 nnoremap <leader>gr :Gread<return>
 nnoremap <leader>gc :Gcommit<return>
 nnoremap <leader>gw :Gwrite<return>
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic configuration
+"
+" status line settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" Check files on open
+let g:syntastic_check_on_open = 1

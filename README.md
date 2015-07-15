@@ -30,3 +30,7 @@ Fugitive shortcuts: `,gs` git status, `,gd` git diff, `,gb` git blame, `,gc` git
 ### [vim-commentary](https://github.com/tpope/vim-commentary)
 
 ### [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
+
+### [Syntastic syntax checkers](https://github.com/scrooloose/syntastic)
+
+**Note** you need to install the actual syntax checkers yourself. Check the syntastic [wiki](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers) for a list.
