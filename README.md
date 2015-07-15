@@ -4,6 +4,7 @@
 
 * `,sv` sources the .vimrc file
 * `<F5>` toggles paste mode
+* Fugitive shortcuts: `,gs` git status, `,gd` git diff, `,gb` git blame, `,gc` git commit, `,gr` git read (clear changes)
 
 ## Included plugins
 

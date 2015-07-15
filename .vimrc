@@ -24,6 +24,9 @@ Plugin 'terryma/vim-multiple-cursors'
 " vim-airline
 Plugin 'bling/vim-airline'
 
+" vim-fugitive
+Plugin 'tpope/vim-fugitive'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -134,3 +137,14 @@ set laststatus=2
 
 " Auto populate the g:airline_symbols dictionary
 let g:airline_powerline_fonts = 1
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-fugitive git shortcuts
+"
+nnoremap <leader>gs :Gstatus<return>
+nnoremap <leader>gd :Gdiff<return>
+nnoremap <leader>gb :Gblame<return>
+nnoremap <leader>gr :Gread<return>
+nnoremap <leader>gc :Gcommit<return>
