@@ -21,6 +21,9 @@ Plugin 'kien/ctrlp.vim'
 " Multiple cursors
 Plugin 'terryma/vim-multiple-cursors'
 
+" vim-airline
+Plugin 'bling/vim-airline'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -94,7 +97,8 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
-
+" Enable 256 colors
+set t_Co=256
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -119,3 +123,14 @@ let g:ctrlp_map = '<C-f>'
 "
 " Change the default mappings
 let g:multi_cursor_next_key='<c-k>'
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Airline Configuration
+"
+" Always display status line
+set laststatus=2
+
+" Auto populate the g:airline_symbols dictionary
+let g:airline_powerline_fonts = 1
