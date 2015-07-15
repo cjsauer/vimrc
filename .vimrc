@@ -57,6 +57,10 @@ Plugin 'Raimondi/delimitMate'
 " Be sure to run `npm install` in the `bundle/tern_for_vim` folder
 Plugin 'marijnh/tern_for_vim'
 
+" YouCompleteMe Autocompletion
+" Works great with Tern!
+Plugin 'Valloric/YouCompleteMe'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -249,3 +253,14 @@ let g:syntastic_check_on_open = 1
 " Tern
 "
 let g:tern_show_argument_hints = 'on_move'
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YouCompleteMe Configuration
+"
+" Completion enabled in comments
+let g:ycm_complete_in_comments = 1
+
+" Close the preivew window after we pick an option
+let g:ycm_autoclose_preview_window_after_completion = 1
