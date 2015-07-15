@@ -14,6 +14,9 @@ Plugin 'YankRing.vim'
 " CtrlP fuzzy finder
 Plugin 'kien/ctrlp.vim'
 
+" Multiple cursors
+Plugin 'terryma/vim-multiple-cursors'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -42,4 +45,11 @@ nnoremap <leader>sv :source ~/.vimrc<return>
 " CtrlP Configuration
 "
 " Change the default mapping
-let g:ctrlp_map = '<c-f>'
+let g:ctrlp_map = '<C-f>'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Multiple Cursor Configuration
+"
+" Change the default mappings
+let g:multi_cursor_next_key='<c-k>'
