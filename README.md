@@ -4,7 +4,8 @@
 
 * `,sv` sources the .vimrc file
 * `<F5>` toggles paste mode
-* Fugitive shortcuts: `,gs` git status, `,gd` git diff, `,gb` git blame, `,gc` git commit, `,gr` git read (clear changes) `,gw` git write (save and add)
+* `:W` save file with sudo
+* `,w` quickly save a file
 
 ## Included plugins
 
@@ -21,3 +22,11 @@ Remapped to `<c-k>` to not conflict with YankRing
 ### [vim-airline](https://github.com/bling/vim-airline)
 
 Make sure that you have correctly followed [these instructions](https://powerline.readthedocs.org/en/master/installation.html#patched-fonts) to get the fonts installed and working correctly.
+
+### [vim-fugitive](https://github.com/tpope/vim-fugitive)
+
+Fugitive shortcuts: `,gs` git status, `,gd` git diff, `,gb` git blame, `,gc` git commit, `,gr` git read (clear changes) `,gw` git write (save and add)
+
+### [vim-commentary](https://github.com/tpope/vim-commentary)
+
+### [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
