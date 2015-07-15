@@ -50,6 +50,9 @@ Plugin 'scrooloose/syntastic'
 " JavaScript linting
 Plugin 'Shutnik/jshint2.vim'
 
+" delimitMate for auto closing of parens, brackets, etc
+Plugin 'Raimondi/delimitMate'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
