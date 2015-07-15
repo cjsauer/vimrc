@@ -134,6 +134,8 @@ let g:solarized_termcolors=256
 " Change the default mapping
 let g:ctrlp_map = '<C-f>'
 
+" Show hidden files too
+let g:ctrlp_show_hidden = 1
 
 
 
