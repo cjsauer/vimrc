@@ -27,6 +27,9 @@ Plugin 'bling/vim-airline'
 " vim-fugitive
 Plugin 'tpope/vim-fugitive'
 
+" vim-commentary
+Plugin 'tpope/vim-commentary'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
