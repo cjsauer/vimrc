@@ -53,6 +53,10 @@ Plugin 'Shutnik/jshint2.vim'
 " delimitMate for auto closing of parens, brackets, etc
 Plugin 'Raimondi/delimitMate'
 
+" Tern-based JavaScript intelligent editing support
+" Be sure to run `npm install` in the `bundle/tern_for_vim` folder
+Plugin 'marijnh/tern_for_vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -222,3 +226,10 @@ set statusline+=%*
 
 " Check files on open
 let g:syntastic_check_on_open = 1
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tern
+"
+let g:tern_show_argument_hints = 'on_move'
