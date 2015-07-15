@@ -29,6 +29,14 @@ Fugitive shortcuts: `,gs` git status, `,gd` git diff, `,gb` git blame, `,gc` git
 
 ### [vim-commentary](https://github.com/tpope/vim-commentary)
 
+### [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
+
+### [vim-sensible](https://github.com/tpope/vim-sensible)
+
+### [vim-surround](https://github.com/tpope/vim-surround)
+
+### [vim-repeat](https://github.com/tpope/vim-repeat)
+
 ### [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 
 ### [Syntastic syntax checkers](https://github.com/scrooloose/syntastic)

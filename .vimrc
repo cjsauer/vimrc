@@ -30,6 +30,18 @@ Plugin 'tpope/vim-fugitive'
 " vim-commentary
 Plugin 'tpope/vim-commentary'
 
+" vim-unimpaired
+Plugin 'tpope/vim-unimpaired'
+
+" vim-sensible to get some sensible default settings
+Plugin 'tpope/vim-sensible'
+
+" vim-surround
+Plugin 'tpope/vim-surround'
+
+" vim-repeat
+Plugin 'tpope/vim-repeat'
+
 " Color schemes!
 Plugin 'flazz/vim-colorschemes'
 
@@ -85,6 +97,9 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=2
 set expandtab
+
+" Always show some lines after the cursor
+set scrolloff=8
 
 
 
