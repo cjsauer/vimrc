@@ -6,9 +6,16 @@ I completely rewrote my vimrc by hand because my last one was borrowed and used 
 
 1. First make sure that you've backed up or removed your own vim files (`.vimrc`, `.vim/`).
 2. Clone the repo to your home directory: `git clone https://github.com/cjsauer/vimrc.git ~/.vim`
-3. `cd .vim/`
-4. `./install.sh`. This creates a symbolic link called `.vimrc` in your home directory, so you are free to edit the .vimrc in this repo and your changes will be observed.
-5. See the plugin list below for details on installing each one
+3. Prepare Vundle: `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+4. `cd .vim/`
+5. `./install.sh`. This creates a symbolic link called `.vimrc` in your home directory, so you are free to edit the .vimrc in this repo and your changes will be observed. It also installs all the plugins using Vundle (this could take a bit of time).
+6. Follow [these instructions](https://powerline.readthedocs.org/en/master/installation.html#patched-fonts) to get the fonts installed and working correctly for vim-airline. *This is optional. If you don't want to use airline, remove it from the .vimrc file*.
+7. Install jshint `npm install -g jshint`
+8. Call `npm install` in the `bundle/tern_for_vim` directory to install Tern. 
+10. Install YouCompleteMe. Follow [these instructions](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation).
+
+For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https://github.com/Slava/tern-meteor) package. Follow [these instructions](https://github.com/Slava/tern-meteor#installation-for-vim) to get it setup in vim and in your Meteor project. 
+
 
 ## Valuable shortcuts
 
@@ -26,7 +33,6 @@ I completely rewrote my vimrc by hand because my last one was borrowed and used 
 + [Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
   + Remapped to `<c-k>` to not conflict with YankRing
 + [vim-airline](https://github.com/bling/vim-airline)
-  + Make sure that you have correctly followed [these instructions](https://powerline.readthedocs.org/en/master/installation.html#patched-fonts) to get the fonts installed and working correctly.
 + [vim-fugitive](https://github.com/tpope/vim-fugitive)
   + `,gs` git status
   + `,gd` git diff
@@ -46,7 +52,6 @@ I completely rewrote my vimrc by hand because my last one was borrowed and used 
     + **Note** you can install more syntax checkers yourself. Check the syntastic [wiki](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers) for a list.
 + [delimitMate](https://github.com/Raimondi/delimitMate)
 + [tern_for_vim](https://github.com/marijnh/tern_for_vim)
-  + [Tern](http://ternjs.net/)-based, intelligent editing support for JavaScript. Be sure to call `npm install` in the `bundle/tern_for_vim` directory!). This is especially useful with Slava's [tern-meteor](https://github.com/Slava/tern-meteor) package. Follow [these instructions](https://github.com/Slava/tern-meteor#installation-for-vim) to get it setup.
+  + [Tern](http://ternjs.net/)-based, intelligent editing support for JavaScript. 
 + [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-  + Make sure that you install it. Follow [these instructions](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation).
 + [vim-javascript](https://github.com/pangloss/vim-javascript)
