@@ -1,5 +1,15 @@
 # Calvin's vimrc
 
+I completely rewrote my vimrc by hand because my last one was borrowed and used tons of features that I didn't use. This one is nice and clean and biased towards JavaScript/Meteor development. 
+
+## Installation
+
+1. First make sure that you've backed up or removed your own vim files (`.vimrc`, `.vim/`).
+2. Clone the repo to your home directory: `git clone https://github.com/cjsauer/vimrc.git ~/.vim`
+3. `cd .vim/`
+4. `./install.sh`. This creates a symbolic link called `.vimrc` in your home directory, so you are free to edit the .vimrc in this repo and your changes will be observed.
+5. See the plugin list below for details on installing each one
+
 ## Valuable shortcuts
 
 + `,sv` sources the .vimrc file
@@ -18,7 +28,12 @@
 + [vim-airline](https://github.com/bling/vim-airline)
   + Make sure that you have correctly followed [these instructions](https://powerline.readthedocs.org/en/master/installation.html#patched-fonts) to get the fonts installed and working correctly.
 + [vim-fugitive](https://github.com/tpope/vim-fugitive)
-  + Fugitive shortcuts: `,gs` git status, `,gd` git diff, `,gb` git blame, `,gc` git commit, `,gr` git read (clear changes) `,gw` git write (save and add)
+  + `,gs` git status
+  + `,gd` git diff
+  + `,gb` git blame
+  + `,gc` git commit
+  + `,gr` git read (clear changes)
+  + `,gw` git write (save and add)
 + [vim-commentary](https://github.com/tpope/vim-commentary)
 + [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
 + [vim-sensible](https://github.com/tpope/vim-sensible)
