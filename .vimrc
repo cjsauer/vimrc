@@ -115,6 +115,15 @@ set expandtab
 " Always show some lines after the cursor
 set scrolloff=8
 
+" Wrap lines, but only insert newlines when enter is pressed
+set wrap " Wrap words visually
+set linebreak " wrap only at the 'breakat' option
+set nolist " list disables linebreak
+" Prevent Vim from automatically inserting line 
+"   breaks in newly entered text
+set textwidth=0
+set wrapmargin=0
+
 
 
 
