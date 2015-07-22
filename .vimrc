@@ -182,6 +182,14 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.meteor/*
 
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Filetypes
+"
+" Force *.md files to be recognized as markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
