@@ -255,6 +255,13 @@ nnoremap <leader>gc :Gcommit<return>
 nnoremap <leader>gw :Gwrite<return>
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-unimpaired extensions
+"
+nmap [g :tabprev<return>
+nmap ]g :tabnext<return>
+
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic configuration
