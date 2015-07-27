@@ -55,3 +55,4 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
   + [Tern](http://ternjs.net/)-based, intelligent editing support for JavaScript. 
 + [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 + [vim-javascript](https://github.com/pangloss/vim-javascript)
++ [emmet-vim](https://github.com/mattn/emmet-vim)

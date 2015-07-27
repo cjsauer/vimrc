@@ -64,6 +64,9 @@ Plugin 'Valloric/YouCompleteMe'
 " JavaScript syntax and indent plugins
 Plugin 'pangloss/vim-javascript'
 
+" Emmet-vim for super fast HTML editing
+Plugin 'mattn/emmet-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
