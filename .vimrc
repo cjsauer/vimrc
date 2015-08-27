@@ -67,6 +67,9 @@ Plugin 'pangloss/vim-javascript'
 " Emmet-vim for super fast HTML editing
 Plugin 'mattn/emmet-vim'
 
+" Add git gutter to note diffs inline
+Plugin 'airblade/vim-gitgutter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
