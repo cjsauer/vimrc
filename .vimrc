@@ -163,6 +163,8 @@ set lazyredraw
 " For regular expressions turn magic on
 set magic
 
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 
 
