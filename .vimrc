@@ -64,6 +64,9 @@ Plugin 'Valloric/YouCompleteMe'
 " JavaScript syntax and indent plugins
 Plugin 'pangloss/vim-javascript'
 
+" JSX syntax highlighting
+Plugin 'mxw/vim-jsx'
+
 " Emmet-vim for super fast HTML editing
 Plugin 'mattn/emmet-vim'
 
