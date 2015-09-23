@@ -10,10 +10,9 @@ I completely rewrote my vimrc by hand because my last one was borrowed and used 
 4. `cd .vim/`
 5. `./install.sh`. This creates a symbolic link called `.vimrc` in your home directory, so you are free to edit the .vimrc in this repo and your changes will be observed. It also installs all the plugins using Vundle (this could take a bit of time).
 6. Follow [these instructions](https://powerline.readthedocs.org/en/master/installation.html#patched-fonts) to get the fonts installed and working correctly for vim-airline. *This is optional. If you don't want to use airline, remove it from the .vimrc file*.
-7. Install jshint `npm install -g jshint`
-8. Install jsxhint `npm install -g jsxhint`
-9. Call `npm install` in the `bundle/tern_for_vim` directory to install Tern. 
-10. Install YouCompleteMe. Follow [these instructions](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation).
+7. Install some linters `npm install -g eslint`, `npm install -g babel-eslint`, `npm install -g eslint-plugin-react`
+8. Call `npm install` in the `bundle/tern_for_vim` directory to install Tern. 
+9. Install YouCompleteMe. Follow [these instructions](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64-super-quick-installation).
 
 For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https://github.com/Slava/tern-meteor) package. Follow [these instructions](https://github.com/Slava/tern-meteor#installation-for-vim) to get it setup in vim and in your Meteor project. 
 

@@ -283,8 +283,14 @@ set statusline+=%*
 let g:syntastic_check_on_open = 1
 
 " Configure usage of the JSX linter
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JavaScript and JSX highlighting
+"
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
