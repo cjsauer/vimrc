@@ -282,6 +282,9 @@ set statusline+=%*
 " Check files on open
 let g:syntastic_check_on_open = 1
 
+" Configure usage of the JSX linter
+let g:syntastic_javascript_checkers = ['jsxhint']
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
