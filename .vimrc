@@ -70,6 +70,9 @@ Plugin 'mattn/emmet-vim'
 " Add git gutter to note diffs inline
 Plugin 'airblade/vim-gitgutter'
 
+" Add NerdTree to visualize directories
+Plugin 'scrooloose/nerdtree'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
