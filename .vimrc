@@ -191,9 +191,9 @@ set t_Co=256
 syntax enable
 
 " Set the color scheme
-set background=light
+set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme lucius
 
 " Use the vim wildmenu for command completion
 set wildmenu
