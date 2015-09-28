@@ -27,14 +27,23 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
 
 ## Included plugins
 
-+ [YankRing.vim](https://github.com/vim-scripts/YankRing.vim)
 + [CtrlP.vim](https://github.com/kien/ctrlp.vim)
   + Remapped to `<c-f>` to not conflict with YankRing. Also note that there are some wildcards in the `.vimrc` file that will ignore annoying directories like `.meteor`, `bundle` (when working on the .vimrc). You can add others to the regex in the `.vimrc`.
++ [delimitMate](https://github.com/Raimondi/delimitMate)
++ [emmet-vim](https://github.com/mattn/emmet-vim)
++ [GitGutter](https://github.com/airblade/vim-gitgutter)
 + [Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
   + Remapped to `<c-q>` to not conflict with YankRing
-+ [vim-airline](https://github.com/bling/vim-airline)
-+ [GitGutter](https://github.com/airblade/vim-gitgutter)
 + [NERDTree](https://github.com/scrooloose/nerdtree)
++ [Syntastic syntax checkers](https://github.com/scrooloose/syntastic)
+  + Included linters
+    + jshint2: be sure to run `npm install -g jshint`. 
+    + **Note** you can install more syntax checkers yourself. Check the syntastic [wiki](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers) for a list.
++ [tern_for_vim](https://github.com/marijnh/tern_for_vim)
+  + [Tern](http://ternjs.net/)-based, intelligent editing support for JavaScript. 
++ [vim-airline](https://github.com/bling/vim-airline)
++ [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
++ [vim-commentary](https://github.com/tpope/vim-commentary)
 + [vim-fugitive](https://github.com/tpope/vim-fugitive)
   + `,gs` git status
   + `,gd` git diff
@@ -42,19 +51,10 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
   + `,gc` git commit
   + `,gr` git read (clear changes)
   + `,gw` git write (save and add)
-+ [vim-commentary](https://github.com/tpope/vim-commentary)
-+ [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
++ [vim-javascript](https://github.com/pangloss/vim-javascript)
++ [vim-repeat](https://github.com/tpope/vim-repeat)
 + [vim-sensible](https://github.com/tpope/vim-sensible)
 + [vim-surround](https://github.com/tpope/vim-surround)
-+ [vim-repeat](https://github.com/tpope/vim-repeat)
-+ [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
-+ [Syntastic syntax checkers](https://github.com/scrooloose/syntastic)
-  + Included linters
-    + jshint2: be sure to run `npm install -g jshint`. 
-    + **Note** you can install more syntax checkers yourself. Check the syntastic [wiki](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers) for a list.
-+ [delimitMate](https://github.com/Raimondi/delimitMate)
-+ [tern_for_vim](https://github.com/marijnh/tern_for_vim)
-  + [Tern](http://ternjs.net/)-based, intelligent editing support for JavaScript. 
++ [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
++ [YankRing.vim](https://github.com/vim-scripts/YankRing.vim)
 + [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
-+ [vim-javascript](https://github.com/pangloss/vim-javascript)
-+ [emmet-vim](https://github.com/mattn/emmet-vim)
