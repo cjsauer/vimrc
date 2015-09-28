@@ -35,6 +35,7 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
   + Remapped to `<c-k>` to not conflict with YankRing
 + [vim-airline](https://github.com/bling/vim-airline)
 + [GitGutter](https://github.com/airblade/vim-gitgutter)
++ [NERDTree](https://github.com/scrooloose/nerdtree)
 + [vim-fugitive](https://github.com/tpope/vim-fugitive)
   + `,gs` git status
   + `,gd` git diff
