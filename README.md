@@ -31,7 +31,7 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
 + [CtrlP.vim](https://github.com/kien/ctrlp.vim)
   + Remapped to `<c-f>` to not conflict with YankRing. Also note that there are some wildcards in the `.vimrc` file that will ignore annoying directories like `.meteor`, `bundle` (when working on the .vimrc). You can add others to the regex in the `.vimrc`.
 + [Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
-  + Remapped to `<c-k>` to not conflict with YankRing
+  + Remapped to `<c-q>` to not conflict with YankRing
 + [vim-airline](https://github.com/bling/vim-airline)
 + [GitGutter](https://github.com/airblade/vim-gitgutter)
 + [NERDTree](https://github.com/scrooloose/nerdtree)
