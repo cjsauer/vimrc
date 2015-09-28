@@ -39,7 +39,7 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
 + [NERDTree](https://github.com/scrooloose/nerdtree)
 + [Syntastic syntax checkers](https://github.com/scrooloose/syntastic)
   + Included linters
-    + jshint2: be sure to run `npm install -g jshint`. 
+    + eslint: be sure to run `npm install -g eslint`. 
     + **Note** you can install more syntax checkers yourself. Check the syntastic [wiki](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers) for a list.
 + [tern_for_vim](https://github.com/marijnh/tern_for_vim)
   + [Tern](http://ternjs.net/)-based, intelligent editing support for JavaScript. 
