@@ -24,6 +24,7 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
 + `:W` save file with sudo
 + `,w` quickly save a file
 + `<c-[jklh]>` fast window switching
++ `,nt` open the NERDTree tab
 
 ## Included plugins
 

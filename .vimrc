@@ -76,6 +76,9 @@ Plugin 'airblade/vim-gitgutter'
 " Add NerdTree to visualize directories
 Plugin 'scrooloose/nerdtree'
 
+" Add git flags support to NerdTree
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
 " All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
@@ -241,6 +244,12 @@ let g:ctrlp_custom_ignore = {
 " Change the default mappings
 let g:multi_cursor_next_key='<c-q>'
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Multiple Cursor Configuration
+"
+" Toggle NERDTree shortcut
+map ,nt :NERDTreeToggle<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
