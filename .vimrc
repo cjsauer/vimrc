@@ -166,10 +166,6 @@ set lazyredraw
 " For regular expressions turn magic on
 set magic
 
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
-
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
@@ -237,7 +233,7 @@ let g:ctrlp_custom_ignore = {
 " Multiple Cursor Configuration
 "
 " Change the default mappings
-let g:multi_cursor_next_key='<c-k>'
+let g:multi_cursor_next_key='<c-q>'
 
 
 
