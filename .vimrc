@@ -139,6 +139,9 @@ set nolist " list disables linebreak
 set textwidth=0
 set wrapmargin=0
 
+" Spell check text and markdown files
+autocmd BufNewFile,BufRead *.md setlocal spell
+autocmd BufNewFile,BufRead *.txt setlocal spell
 
 
 
