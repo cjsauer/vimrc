@@ -43,6 +43,8 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
     + **Note** you can install more syntax checkers yourself. Check the syntastic [wiki](https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers) for a list.
 + [tern_for_vim](https://github.com/marijnh/tern_for_vim)
   + [Tern](http://ternjs.net/)-based, intelligent editing support for JavaScript. 
++ [Ultisnips](https://github.com/SirVer/ultisnips)
+  + [Supertab](https://github.com/ervandew/supertab) is used to help YCM and Ultisnips play nice together. The tab key should act intelligently when scrolling through the completion list, or expanding a snippet.
 + [vim-airline](https://github.com/bling/vim-airline)
 + [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 + [vim-commentary](https://github.com/tpope/vim-commentary)

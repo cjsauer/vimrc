@@ -70,6 +70,12 @@ Plugin 'mxw/vim-jsx'
 " Emmet-vim for super fast HTML editing
 Plugin 'mattn/emmet-vim'
 
+" Supertab to get Ultisnips and YCM to play nice
+Plugin 'ervandew/supertab'
+
+" Ultisnips snippet engine
+Plugin 'SirVer/ultisnips'
+
 " Add git gutter to note diffs inline
 Plugin 'airblade/vim-gitgutter'
 
@@ -319,3 +325,18 @@ let g:ycm_complete_in_comments = 1
 
 " Close the preivew window after we pick an option
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ultisnips configuration
+"
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>""
+let g:UltiSnipsEditSplit="vertical"
