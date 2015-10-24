@@ -1,11 +1,9 @@
-# snippets for making snippets :)
-snippet snip
-	snippet ${1:trigger}
-		${0}
-snippet msnip
-	snippet ${1:trigger} ${2:description}
-		${0}
-snippet v
-	{VISUAL}
-snippet $
-	${${1:1}:${0:text}}
+priority -50
+
+# We use a little hack so that the snippet is expanded
+# and parsed correctly
+snippet snip "Snippet definition" b
+`!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:b}
+$0
+`!p snip.rv = "endsnippet"`
+endsnippet
