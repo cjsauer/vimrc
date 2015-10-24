@@ -152,10 +152,10 @@ set wrapmargin=0
 " Moving around
 "
 " Faster window switching
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-l> <c-w>l
+nmap <c-h> <c-w>h
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
@@ -181,6 +181,11 @@ set lazyredraw
 " For regular expressions turn magic on
 set magic
 
+" Highlights all search hits
+set hlsearch
+
+" Toggle search highlighting
+nnoremap <F3> :set hlsearch!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface

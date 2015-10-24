@@ -20,6 +20,7 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
 ## Valuable shortcuts
 
 + `,sv` sources the .vimrc file
++ `<F3>` toggles search highlighting
 + `<F5>` toggles paste mode
 + `:W` save file with sudo
 + `,w` quickly save a file
