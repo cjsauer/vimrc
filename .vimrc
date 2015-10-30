@@ -146,8 +146,8 @@ set textwidth=0
 set wrapmargin=0
 
 
-" Press <leader>s to get to a shell and <c-d> to get back
-nnoremap <leader>s :shell<return>
+" Press <c-d> to get in and out of a shell
+nnoremap <c-d> :shell<return>
 
 
 
