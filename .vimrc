@@ -243,7 +243,7 @@ let g:ctrlp_show_hidden = 1
 
 " Ignore some files when fuzzy searching
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.?(git|hg|svn|meteor|bundle)$',
+  \ 'dir':  '\v[\/]\.?(git|hg|svn|meteor|bundle|node_modules|bower_components)$',
   \ 'file': '\v\.(so|swp|zip)$'
   \ }
 
