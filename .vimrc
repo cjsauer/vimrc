@@ -67,6 +67,9 @@ Plugin 'pangloss/vim-javascript'
 " JSX syntax highlighting
 Plugin 'mxw/vim-jsx'
 
+" Elixir and EEX syntax highlighting
+Plugin 'elixir-lang/vim-elixir'
+
 " Emmet-vim for super fast HTML editing
 Plugin 'mattn/emmet-vim'
 
