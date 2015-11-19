@@ -153,6 +153,9 @@ autocmd BufNewFile,BufRead *.md setlocal spell
 autocmd BufNewFile,BufRead *.txt setlocal spell
 autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 
+" Press <c-d> to get in and out of a shell
+nnoremap <c-d> :shell<return>
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
