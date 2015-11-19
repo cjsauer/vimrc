@@ -148,6 +148,10 @@ set nolist " list disables linebreak
 set textwidth=0
 set wrapmargin=0
 
+" Spell check commit messages, text, and markdown files
+autocmd BufNewFile,BufRead *.md setlocal spell
+autocmd BufNewFile,BufRead *.txt setlocal spell
+autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 
 
 
