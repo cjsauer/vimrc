@@ -153,6 +153,9 @@ autocmd BufNewFile,BufRead *.md setlocal spell
 autocmd BufNewFile,BufRead *.txt setlocal spell
 autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 
+" Open split windows below / to the right
+set splitbelow
+set splitright
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
