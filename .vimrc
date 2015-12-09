@@ -309,7 +309,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " Check files on open
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 
 " Configure usage of the JSX linter
 let g:syntastic_javascript_checkers = ['eslint']
