@@ -299,6 +299,15 @@ nnoremap <leader>gw :Gwrite<return>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-localvimrc config
+"
+" Don't ask to load the .vimrc file
+let g:localvimrc_ask = 0
+" load files going from working dir to root
+let g:localvimrc_reverse = 1
+let g:localvimrc_name = [ ".lvimrc", ".vimrc" ]
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-unimpaired extensions
 "
 nmap [g :tabprev<return>
