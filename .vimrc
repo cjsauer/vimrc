@@ -30,6 +30,9 @@ Plugin 'tpope/vim-fugitive'
 " vim-commentary
 Plugin 'tpope/vim-commentary'
 
+" vim-localvimrc
+Plugin 'embear/vim-localvimrc'
+
 " vim-unimpaired
 Plugin 'tpope/vim-unimpaired'
 
