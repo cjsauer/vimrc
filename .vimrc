@@ -31,6 +31,9 @@ Plugin 'tpope/vim-fugitive'
 " vim-commentary
 Plugin 'tpope/vim-commentary'
 
+" vim-localvimrc
+Plugin 'embear/vim-localvimrc'
+
 " vim-unimpaired
 Plugin 'tpope/vim-unimpaired'
 
@@ -295,6 +298,15 @@ nnoremap <leader>gr :Gread<return>
 nnoremap <leader>gc :Gcommit<return>
 nnoremap <leader>gw :Gwrite<return>
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-localvimrc config
+"
+" Don't ask to load the .vimrc file
+let g:localvimrc_ask = 0
+" load files going from working dir to root
+let g:localvimrc_reverse = 1
+let g:localvimrc_name = [ ".lvimrc", ".vimrc" ]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-unimpaired extensions
