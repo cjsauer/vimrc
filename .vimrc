@@ -229,6 +229,13 @@ set wildmode=longest:full,full
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.meteor/*
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Eclim
+"
+" eclim maps
+nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
+nnoremap <silent> <buffer> <leader>d :JavaDocSearch<cr>
+nnoremap <silent> <buffer> <leader>k :JavaSearchContext<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetypes
