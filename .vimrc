@@ -31,6 +31,9 @@ Plugin 'tpope/vim-fugitive'
 " vim-commentary
 Plugin 'tpope/vim-commentary'
 
+" eclim mirror
+Plugin 'dansomething/vim-eclim'
+
 " vim-localvimrc
 Plugin 'embear/vim-localvimrc'
 
