@@ -47,8 +47,6 @@ Plugin 'flazz/vim-colorschemes'
 
 " Syntastic syntax checking
 Plugin 'scrooloose/syntastic'
-" JavaScript linting
-Plugin 'Shutnik/jshint2.vim'
 
 " delimitMate for auto closing of parens, brackets, etc
 Plugin 'Raimondi/delimitMate'
