@@ -38,6 +38,7 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
 + [Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
   + Remapped to `<c-q>` to not conflict with YankRing
 + [NERDTree](https://github.com/scrooloose/nerdtree)
++ [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 + [Syntastic syntax checkers](https://github.com/scrooloose/syntastic)
   + Included linters
     + eslint: be sure to run `npm install -g eslint`. 
@@ -57,6 +58,7 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
   + `,gr` git read (clear changes)
   + `,gw` git write (save and add)
 + [vim-javascript](https://github.com/pangloss/vim-javascript)
++ [vim-jsx](https://github.com/mxw/vim-jsx)
 + [vim-repeat](https://github.com/tpope/vim-repeat)
 + [vim-sensible](https://github.com/tpope/vim-sensible)
 + [vim-surround](https://github.com/tpope/vim-surround)
