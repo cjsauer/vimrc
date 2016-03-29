@@ -36,7 +36,7 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
 + [emmet-vim](https://github.com/mattn/emmet-vim)
 + [GitGutter](https://github.com/airblade/vim-gitgutter)
 + [Multiple Cursors](https://github.com/terryma/vim-multiple-cursors)
-  + Remapped to `<c-q>` to not conflict with YankRing
+  + Remapped to `<C-m>` to not conflict with YankRing
 + [NERDTree](https://github.com/scrooloose/nerdtree)
 + [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 + [Syntastic syntax checkers](https://github.com/scrooloose/syntastic)
@@ -64,4 +64,5 @@ For Meteor developing, Tern is much more useful with Slava's [tern-meteor](https
 + [vim-surround](https://github.com/tpope/vim-surround)
 + [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
 + [YankRing.vim](https://github.com/vim-scripts/YankRing.vim)
+  + `<F10>` displays the content of the YankRing (press `p` to paste selection from the list)
 + [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)

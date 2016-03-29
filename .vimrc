@@ -260,16 +260,8 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Multiple Cursor Configuration
-"
-" Change the default mappings
-let g:multi_cursor_next_key='<c-q>'
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Multiple Cursor Configuration
+" NERDTree configuration
 "
 " Toggle NERDTree shortcut
 map ,nt :NERDTreeToggle<CR>
@@ -366,3 +358,18 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>""
 let g:UltiSnipsEditSplit="vertical"
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YankRing Configuration
+"
+" Hotkey for the :YRShow
+nnoremap <silent> <F10> :YRShow<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Multiple Cursor Configurationp>'
+"
+" Change the default mapping
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-m>'
