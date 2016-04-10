@@ -81,6 +81,9 @@ Plugin 'ervandew/supertab'
 " Ultisnips snippet engine
 Plugin 'SirVer/ultisnips'
 
+" Lots of snippets for lots of languages
+Plugin 'honza/vim-snippets'
+
 " Add git gutter to note diffs inline
 Plugin 'airblade/vim-gitgutter'
 
@@ -331,6 +334,7 @@ let g:jsx_ext_required = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tern
 "
+let g:is_tern_argument_hints_enabled=1
 let g:tern_show_argument_hints = 'on_move'
 
 
