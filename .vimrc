@@ -16,7 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'YankRing.vim'
 
 " CtrlP fuzzy finder
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Multiple cursors
 Plugin 'terryma/vim-multiple-cursors'
