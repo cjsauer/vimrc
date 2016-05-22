@@ -31,6 +31,9 @@ Plugin 'tpope/vim-fugitive'
 " vim-commentary
 Plugin 'tpope/vim-commentary'
 
+" eclim mirror
+Plugin 'dansomething/vim-eclim'
+
 " vim-localvimrc
 Plugin 'embear/vim-localvimrc'
 
@@ -229,6 +232,13 @@ set wildmode=longest:full,full
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.meteor/*
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Eclim
+"
+" eclim maps
+nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
+nnoremap <silent> <buffer> <leader>d :JavaDocSearch<cr>
+nnoremap <silent> <buffer> <leader>k :JavaSearchContext<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetypes
@@ -352,6 +362,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:EclimCompletionMethod = 'omnifunc'
 
 autocmd FileType javascript setlocal omnifunc=tern#Complete
 autocmd FileType jsx setlocal omnifunc=tern#Complete
