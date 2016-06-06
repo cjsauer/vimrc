@@ -5,9 +5,9 @@ I completely rewrote my vimrc by hand because my last one was borrowed and used 
 ## Installation
 
 1. First make sure that you've backed up or removed your own vim files (`.vimrc`, `.vim/`).
-2. Clone the repo to your home directory: `git clone https://github.com/cjsauer/vimrc.git ~/.vim`
-3. Prepare Vundle: `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-4. `cd .vim/`
+2. Clone the repo to your home directory: `git clone https://github.com/elGatoMantocko/vimrc.git ~/.dotfiles/vim`
+3. Prepare Vundle: `git clone https://github.com/gmarik/Vundle.vim.git ~/.dotfiles/vim/bundle/Vundle.vim`
+4. `cd .dotfiles/vim/`
 5. `./install.sh`. This creates a symbolic link called `.vimrc` in your home directory, so you are free to edit the .vimrc in this repo and your changes will be observed. It also installs all the plugins using Vundle (this could take a bit of time).
 6. Follow [these instructions](https://powerline.readthedocs.org/en/master/installation.html#patched-fonts) to get the fonts installed and working correctly for vim-airline. *This is optional. If you don't want to use airline, remove it from the .vimrc file*.
 7. Install some linters `npm install -g eslint`, `npm install -g babel-eslint`, `npm install -g eslint-plugin-react`
