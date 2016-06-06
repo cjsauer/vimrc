@@ -1,4 +1,4 @@
-# Calvin's vimrc
+# Elliott's vimrc
 
 I completely rewrote my vimrc by hand because my last one was borrowed and used tons of features that I didn't use. This one is nice and clean and biased towards JavaScript/Meteor development. 
 
