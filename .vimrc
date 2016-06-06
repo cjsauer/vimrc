@@ -10,7 +10,7 @@ set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
 call vundle#begin('~/.dotfiles/vim/bundle')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " YankRing
 Plugin 'YankRing.vim'
