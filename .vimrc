@@ -31,6 +31,9 @@ Plugin 'tpope/vim-fugitive'
 " vim-commentary
 Plugin 'tpope/vim-commentary'
 
+" mustache/handlebars
+Plugin 'mustache/vim-mustache-handlebars'
+
 " vim-localvimrc
 Plugin 'embear/vim-localvimrc'
 
