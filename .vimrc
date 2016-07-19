@@ -34,6 +34,9 @@ Plugin 'tpope/vim-commentary'
 " eclim mirror
 Plugin 'dansomething/vim-eclim'
 
+" mustache/handlebars
+Plugin 'mustache/vim-mustache-handlebars'
+
 " vim-localvimrc
 Plugin 'embear/vim-localvimrc'
 
