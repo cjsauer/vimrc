@@ -63,7 +63,7 @@ Plugin 'Raimondi/delimitMate'
 
 " Tern-based JavaScript intelligent editing support
 " Be sure to run `npm install` in the `bundle/tern_for_vim` folder
-Plugin 'marijnh/tern_for_vim'
+Plugin 'ternjs/tern_for_vim'
 
 " YouCompleteMe Autocompletion
 " Works great with Tern!
@@ -358,7 +358,7 @@ let g:jsx_ext_required = 0
 " Tern
 "
 let g:is_tern_argument_hints_enabled=1
-let g:tern_show_argument_hints = 'on_move'
+" let g:tern_show_argument_hints = 'on_move'
 
 
 
