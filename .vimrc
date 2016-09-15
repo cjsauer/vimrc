@@ -72,12 +72,6 @@ Plugin 'Valloric/YouCompleteMe'
 " JavaScript syntax and indent plugins
 Plugin 'pangloss/vim-javascript'
 
-" JSX syntax highlighting
-Plugin 'mxw/vim-jsx'
-
-" Elixir and EEX syntax highlighting
-Plugin 'elixir-lang/vim-elixir'
-
 " Emmet-vim for super fast HTML editing
 Plugin 'mattn/emmet-vim'
 
@@ -144,8 +138,8 @@ set pastetoggle=<F5>
 " Tab settings
 filetype plugin indent on
 set tabstop=4
-set shiftwidth=2
-set expandtab
+set shiftwidth=4
+set noexpandtab
 
 " Always show some lines after the cursor
 set scrolloff=8
@@ -348,17 +342,10 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" JavaScript and JSX highlighting
-"
-" Allow JSX in normal JS files
-let g:jsx_ext_required = 0
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tern
 "
 let g:is_tern_argument_hints_enabled=1
-" let g:tern_show_argument_hints = 'on_move'
+let g:tern_show_argument_hints = 'on_hold'
 
 
 
@@ -378,7 +365,6 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:EclimCompletionMethod = 'omnifunc'
 
 autocmd FileType javascript setlocal omnifunc=tern#Complete
-autocmd FileType jsx setlocal omnifunc=tern#Complete
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
