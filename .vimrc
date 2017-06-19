@@ -12,9 +12,6 @@ call vundle#begin('~/.dotfiles/vim/bundle')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" YankRing
-Plugin 'YankRing.vim'
-
 " CtrlP fuzzy finder
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -37,8 +34,8 @@ Plugin 'dansomething/vim-eclim'
 " mustache/handlebars
 Plugin 'mustache/vim-mustache-handlebars'
 
-" vim-localvimrc
-Plugin 'embear/vim-localvimrc'
+" editorconfig
+Plugin 'editorconfig/editorconfig-vim'
 
 " vim-unimpaired
 Plugin 'tpope/vim-unimpaired'
@@ -55,8 +52,8 @@ Plugin 'tpope/vim-repeat'
 " Color schemes!
 Plugin 'flazz/vim-colorschemes'
 
-" Syntastic syntax checking
-Plugin 'scrooloose/syntastic'
+" Neomake syntax checking
+Plugin 'neomake/neomake'
 
 " delimitMate for auto closing of parens, brackets, etc
 Plugin 'Raimondi/delimitMate'
@@ -68,9 +65,6 @@ Plugin 'ternjs/tern_for_vim'
 " YouCompleteMe Autocompletion
 " Works great with Tern!
 Plugin 'Valloric/YouCompleteMe'
-
-" JavaScript syntax and indent plugins
-Plugin 'pangloss/vim-javascript'
 
 " Emmet-vim for super fast HTML editing
 Plugin 'mattn/emmet-vim'
@@ -107,8 +101,6 @@ filetype plugin indent on
 " Put your non-Plugin stuff after this line
 
 
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 "
@@ -137,9 +129,9 @@ set pastetoggle=<F5>
 
 " Tab settings
 filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 " Always show some lines after the cursor
 set scrolloff=8
@@ -287,6 +279,13 @@ let g:ctrlp_custom_ignore = {
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Editorconfig
+"
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree configuration
 "
 " Toggle NERDTree shortcut
@@ -316,43 +315,34 @@ nnoremap <leader>gw :Gwrite<return>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-localvimrc config
-"
-" Don't ask to load the .vimrc file
-let g:localvimrc_ask = 0
-" load files going from working dir to root
-let g:localvimrc_reverse = 1
-let g:localvimrc_name = [ ".lvimrc", ".vimrc" ]
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-unimpaired extensions
 "
 nmap [g :tabprev<return>
 nmap ]g :tabnext<return>
 
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic configuration
+" neomake
 "
-" status line settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+let g:neomake_javascript_eslint_maker = {
+	\ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+		\ '%W%f: line %l\, col %c\, Warning - %m',
+	\ 'exe': "/usr/local/bin/eslint",
+	\ 'args': ['-f', 'compact', '--rule', '{"no-console":[1]}'],
+	\ }
 
-" Check files on open
-let g:syntastic_check_on_open = 0
+let g:neomake_less_lesshint_maker = {
+	\ 'errorformat': '%EError: %f: line %l\, col %c\, %m,' .
+		\ '%WWarning: %f: line %l\, col %c\, %m',
+	\ 'exe': "/usr/local/bin/lesshint"
+	\ }
 
-" Configure usage of the JSX linter
-let g:syntastic_javascript_checkers = ['eslint']
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_jsx_enabled_makers = ['eslint']
+let g:neomake_less_enabled_makers = ['lesshint']
+let g:neomake_java_enabled_makers = []
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tern
-"
-let g:is_tern_argument_hints_enabled=1
-let g:tern_show_argument_hints = 'on_hold'
-
+autocmd! BufWritePost * Neomake
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -381,13 +371,6 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>""
 let g:UltiSnipsEditSplit="vertical"
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" YankRing Configuration
-"
-" Hotkey for the :YRShow
-nnoremap <silent> <F10> :YRShow<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
