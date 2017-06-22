@@ -12,30 +12,11 @@ call vundle#begin('~/.dotfiles/vim/bundle')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" CtrlP fuzzy finder
-Plugin 'ctrlpvim/ctrlp.vim'
-
-" Multiple cursors
-Plugin 'terryma/vim-multiple-cursors'
-
-" vim-airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
 " vim-fugitive
 Plugin 'tpope/vim-fugitive'
 
 " vim-commentary
 Plugin 'tpope/vim-commentary'
-
-" eclim mirror
-Plugin 'dansomething/vim-eclim'
-
-" mustache/handlebars
-Plugin 'mustache/vim-mustache-handlebars'
-
-" editorconfig
-Plugin 'editorconfig/editorconfig-vim'
 
 " vim-unimpaired
 Plugin 'tpope/vim-unimpaired'
@@ -48,6 +29,23 @@ Plugin 'tpope/vim-surround'
 
 " vim-repeat
 Plugin 'tpope/vim-repeat'
+
+" fzf fuzzy finder
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+
+" Multiple cursors
+Plugin 'terryma/vim-multiple-cursors'
+
+" vim-airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" mustache/handlebars
+Plugin 'mustache/vim-mustache-handlebars'
+
+" editorconfig
+Plugin 'editorconfig/editorconfig-vim'
 
 " Color schemes!
 Plugin 'flazz/vim-colorschemes'
@@ -231,16 +229,8 @@ set wildmenu
 set wildmode=longest:full,full
 
 " Ignore files in the wildmenu
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.meteor/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.meteor/*,target/*
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Eclim
-"
-" eclim maps
-nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
-nnoremap <silent> <buffer> <leader>d :JavaDocSearch<cr>
-nnoremap <silent> <buffer> <leader>k :JavaSearchContext<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetypes
@@ -263,20 +253,9 @@ autocmd Filetype javascript
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlP Configuration
+" fzf config
 "
-" Change the default mapping
-let g:ctrlp_map = '<C-f>'
-
-" Show hidden files too
-let g:ctrlp_show_hidden = 1
-
-" Ignore some files when fuzzy searching
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.?(git|hg|svn|meteor|bundle|node_modules|bower_components)$',
-  \ 'file': '\v\.(so|swp|zip)$'
-  \ }
-
+nnoremap <C-f> :Files<return>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
@@ -289,7 +268,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 " NERDTree configuration
 "
 " Toggle NERDTree shortcut
-map ,nt :NERDTreeToggle<CR>
+map <leader>nt :NERDTreeToggle<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
