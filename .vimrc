@@ -131,6 +131,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Turn on line numbers and relative line numbers
+set nu
+set rnu
+
 " Always show some lines after the cursor
 set scrolloff=8
 
