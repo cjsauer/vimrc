@@ -253,7 +253,10 @@ nnoremap <silent> <buffer> <leader>k :JavaSearchContext<cr>
 " Force *.md files to be recognized as markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-
+" notify if line is over 80 columns
+autocmd Filetype javascript
+  \ highlight OverLength ctermbg=red ctermfg=white |
+  \ match OverLength /\%81v.\+/
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
