@@ -128,7 +128,7 @@ set autoread
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file 
+" :W sudo saves the file
 " (useful for handling the permission-denied error)
 command! W w !sudo tee % > /dev/null
 
@@ -148,7 +148,7 @@ set scrolloff=8
 set wrap " Wrap words visually
 set linebreak " wrap only at the 'breakat' option
 set nolist " list disables linebreak
-" Prevent Vim from automatically inserting line 
+" Prevent Vim from automatically inserting line
 "   breaks in newly entered text
 set textwidth=0
 set wrapmargin=0
@@ -172,6 +172,9 @@ if has("multi_byte")
   set fileencodings=ucs-bom,utf-8,latin1
 endif
 
+" clean trailing white space and carraige returns
+autocmd BufWritePre * :%s/\s\+$//e | %s/\r$//e
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Moving around
@@ -190,18 +193,18 @@ map k gk
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search Options
-" 
+"
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
@@ -214,9 +217,9 @@ nnoremap <F3> :set hlsearch!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface
-" 
+"
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
