@@ -12,14 +12,18 @@ call vundle#begin('~/.dotfiles/vim/bundle')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" vim fuzzy finder
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+
+" async lint engine
+Plugin 'w0rp/ale'
+
 " vim-fugitive
 Plugin 'tpope/vim-fugitive'
 
 " vim-commentary
 Plugin 'tpope/vim-commentary'
-
-" vim-unimpaired
-Plugin 'tpope/vim-unimpaired'
 
 " vim-sensible to get some sensible default settings
 Plugin 'tpope/vim-sensible'
@@ -29,10 +33,6 @@ Plugin 'tpope/vim-surround'
 
 " vim-repeat
 Plugin 'tpope/vim-repeat'
-
-" fzf fuzzy finder
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
 
 " Multiple cursors
 Plugin 'terryma/vim-multiple-cursors'
@@ -50,19 +50,12 @@ Plugin 'editorconfig/editorconfig-vim'
 " Color schemes!
 Plugin 'flazz/vim-colorschemes'
 
-" Neomake syntax checking
-Plugin 'neomake/neomake'
-
 " delimitMate for auto closing of parens, brackets, etc
 Plugin 'Raimondi/delimitMate'
 
 " Tern-based JavaScript intelligent editing support
 " Be sure to run `npm install` in the `bundle/tern_for_vim` folder
 Plugin 'ternjs/tern_for_vim'
-
-" YouCompleteMe Autocompletion
-" Works great with Tern!
-Plugin 'Valloric/YouCompleteMe'
 
 " Emmet-vim for super fast HTML editing
 Plugin 'mattn/emmet-vim'
@@ -104,6 +97,8 @@ filetype plugin indent on
 "
 " Sets how many lines of history VIM has to remember
 set history=700
+
+set backspace=indent,eol,start
 
 " With a map leader it's possible to do extra key combinations
 let mapleader = ","
@@ -155,16 +150,6 @@ autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 " Open split windows below / to the right
 set splitbelow
 set splitright
-
-if has("multi_byte")
-  if &termencoding == ""
-    let &termencoding = &encoding
-  endif
-  set encoding=utf-8
-  setglobal fileencoding=utf-8
-  "setglobal bomb
-  set fileencodings=ucs-bom,utf-8,latin1
-endif
 
 " clean trailing white space and carraige returns
 autocmd BufWritePre * :%s/\s\+$//e | %s/\r$//e
@@ -242,12 +227,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.meteor/*,target/*
 " Force *.md files to be recognized as markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-" notify if line is over 80 columns
-autocmd Filetype javascript
-  \ highlight OverLength ctermbg=red ctermfg=white |
-  \ match OverLength /\%81v.\+/
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
@@ -267,6 +246,13 @@ nnoremap <C-f> :Files<return>
 "
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Delimitmate
+"
+let g:delimitMate_expand_space = 1
+let g:delimitMate_expand_cr = 1
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree configuration
@@ -283,6 +269,9 @@ set laststatus=2
 
 " Auto populate the g:airline_symbols dictionary
 let g:airline_powerline_fonts = 1
+
+" Set mixed indent algorithm
+let g:airline#extensions#whitespace#mixed_indent_algo = 1
 
 
 
@@ -303,47 +292,12 @@ nnoremap <leader>gw :Gwrite<return>
 nmap [g :tabprev<return>
 nmap ]g :tabnext<return>
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" neomake
+" ale
 "
-let g:neomake_javascript_eslint_maker = {
-	\ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
-		\ '%W%f: line %l\, col %c\, Warning - %m',
-	\ 'exe': "/usr/local/bin/eslint",
-	\ 'args': ['-f', 'compact', '--rule', '{"no-console":[1]}'],
-	\ }
-
-let g:neomake_less_lesshint_maker = {
-	\ 'errorformat': '%EError: %f: line %l\, col %c\, %m,' .
-		\ '%WWarning: %f: line %l\, col %c\, %m',
-	\ 'exe': "/usr/local/bin/lesshint"
-	\ }
-
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_jsx_enabled_makers = ['eslint']
-let g:neomake_less_enabled_makers = ['lesshint']
-let g:neomake_java_enabled_makers = []
-
-autocmd! BufWritePost * Neomake
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" YouCompleteMe Configuration
-"
-" Completion enabled in comments
-let g:ycm_complete_in_comments = 1
-
-" Close the preivew window after we pick an option
-let g:ycm_autoclose_preview_window_after_completion = 1
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:EclimCompletionMethod = 'omnifunc'
-
-autocmd FileType javascript setlocal omnifunc=tern#Complete
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
