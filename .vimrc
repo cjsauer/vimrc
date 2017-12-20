@@ -9,74 +9,31 @@ filetype off
 set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
 call vundle#begin('~/.dotfiles/vim/bundle')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" vim fuzzy finder
-Plugin 'junegunn/fzf'
+" highlight Plugin block then ex :'<,'>!sort -f
+Plugin 'airblade/vim-gitgutter'           " Add git gutter to note diffs inline
+Plugin 'editorconfig/editorconfig-vim'    " editorconfig
+Plugin 'ervandew/supertab'                " Supertab to get Ultisnips and YCM to play nice
+Plugin 'flazz/vim-colorschemes'           " Color schemes!
+Plugin 'honza/vim-snippets'               " Lots of snippets for lots of languages
+Plugin 'junegunn/fzf'                     " vim fuzzy finder
 Plugin 'junegunn/fzf.vim'
-
-" async lint engine
-Plugin 'w0rp/ale'
-
-" vim-fugitive
-Plugin 'tpope/vim-fugitive'
-
-" vim-commentary
-Plugin 'tpope/vim-commentary'
-
-" vim-sensible to get some sensible default settings
-Plugin 'tpope/vim-sensible'
-
-" vim-surround
-Plugin 'tpope/vim-surround'
-
-" vim-repeat
-Plugin 'tpope/vim-repeat'
-
-" Multiple cursors
-Plugin 'terryma/vim-multiple-cursors'
-
-" vim-airline
-Plugin 'vim-airline/vim-airline'
+Plugin 'mattn/emmet-vim'                  " Emmet-vim for super fast HTML editing
+Plugin 'mustache/vim-mustache-handlebars' " mustache/handlebars
+Plugin 'Raimondi/delimitMate'             " delimitMate for auto closing of parens, brackets, etc
+Plugin 'scrooloose/nerdtree'              " Add NerdTree to visualize directories
+Plugin 'SirVer/ultisnips'                 " Ultisnips snippet engine
+Plugin 'ternjs/tern_for_vim'              " Tern-based JavaScript intelligent editing support
+Plugin 'terryma/vim-multiple-cursors'     " Multiple cursors
+Plugin 'tpope/vim-commentary'             " vim-commentary
+Plugin 'tpope/vim-fugitive'               " vim-fugitive
+Plugin 'tpope/vim-repeat'                 " vim-repeat
+Plugin 'tpope/vim-sensible'               " vim-sensible to get some sensible default settings
+Plugin 'tpope/vim-surround'               " vim-surround
+Plugin 'vim-airline/vim-airline'          " vim-airline
 Plugin 'vim-airline/vim-airline-themes'
-
-" mustache/handlebars
-Plugin 'mustache/vim-mustache-handlebars'
-
-" editorconfig
-Plugin 'editorconfig/editorconfig-vim'
-
-" Color schemes!
-Plugin 'flazz/vim-colorschemes'
-
-" delimitMate for auto closing of parens, brackets, etc
-Plugin 'Raimondi/delimitMate'
-
-" Tern-based JavaScript intelligent editing support
-" Be sure to run `npm install` in the `bundle/tern_for_vim` folder
-Plugin 'ternjs/tern_for_vim'
-
-" Emmet-vim for super fast HTML editing
-Plugin 'mattn/emmet-vim'
-
-" Supertab to get Ultisnips and YCM to play nice
-Plugin 'ervandew/supertab'
-
-" Ultisnips snippet engine
-Plugin 'SirVer/ultisnips'
-
-" Lots of snippets for lots of languages
-Plugin 'honza/vim-snippets'
-
-" Add git gutter to note diffs inline
-Plugin 'airblade/vim-gitgutter'
-
-" Add NerdTree to visualize directories
-Plugin 'scrooloose/nerdtree'
-
-" Add git flags support to NerdTree
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
+Plugin 'w0rp/ale'                         " async lint engine
+Plugin 'Xuyuanp/nerdtree-git-plugin'      " Add git flags support to NerdTree
 
 " All of your Plugins must be added before the following line
 call vundle#end()
