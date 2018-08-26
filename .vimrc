@@ -6,8 +6,8 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.dotfiles/vim/bundle/Vundle.vim
-call vundle#begin('~/.dotfiles/vim/bundle')
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin('~/.vim/bundle')
 
 " highlight Plugin block then ex :'<,'>!sort -f
 Plugin 'airblade/vim-gitgutter'           " Add git gutter to note diffs inline
@@ -19,16 +19,19 @@ Plugin 'junegunn/fzf'                     " vim fuzzy finder
 Plugin 'junegunn/fzf.vim'
 Plugin 'mattn/emmet-vim'                  " Emmet-vim for super fast HTML editing
 Plugin 'mustache/vim-mustache-handlebars' " mustache/handlebars
+Plugin 'pangloss/vim-javascript'          " javascript syntax highlighting
 Plugin 'Raimondi/delimitMate'             " delimitMate for auto closing of parens, brackets, etc
 Plugin 'scrooloose/nerdtree'              " Add NerdTree to visualize directories
 Plugin 'SirVer/ultisnips'                 " Ultisnips snippet engine
 Plugin 'ternjs/tern_for_vim'              " Tern-based JavaScript intelligent editing support
 Plugin 'terryma/vim-multiple-cursors'     " Multiple cursors
+Plugin 'tpope/vim-characterize'           " Unicode character metadata
 Plugin 'tpope/vim-commentary'             " vim-commentary
 Plugin 'tpope/vim-fugitive'               " vim-fugitive
 Plugin 'tpope/vim-repeat'                 " vim-repeat
 Plugin 'tpope/vim-sensible'               " vim-sensible to get some sensible default settings
 Plugin 'tpope/vim-surround'               " vim-surround
+Plugin 'Valloric/YouCompleteMe'           " vim autocomplete
 Plugin 'vim-airline/vim-airline'          " vim-airline
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'VundleVim/Vundle.vim'             " let Vundle manage Vundle, required
@@ -48,6 +51,8 @@ filetype plugin indent on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" workaround for vim bug
+silent! py3 pass
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
@@ -87,13 +92,17 @@ set expandtab
 set nu
 set rnu
 
+" Turn on some whitespace visualization
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+set list
+
 " Always show some lines after the cursor
 set scrolloff=8
 
 " Wrap lines, but only insert newlines when enter is pressed
 set wrap " Wrap words visually
 set linebreak " wrap only at the 'breakat' option
-set nolist " list disables linebreak
+
 " Prevent Vim from automatically inserting line
 "   breaks in newly entered text
 set textwidth=0
@@ -104,12 +113,12 @@ autocmd BufNewFile,BufRead *.md setlocal spell
 autocmd BufNewFile,BufRead *.txt setlocal spell
 autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
 
+" Change syntax highlighting for riot components
+autocmd BufNewFile,BufRead *.tag set syntax=html
+
 " Open split windows below / to the right
 set splitbelow
 set splitright
-
-" clean trailing white space and carraige returns
-autocmd BufWritePre * :%s/\s\+$//e | %s/\r$//e
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -165,10 +174,13 @@ set t_Co=256
 " Syntax highlighting
 syntax enable
 
-" Set the color scheme
-set background=dark
+" Set the color scheme for airline and the tui
+let g:airline_solarized_bg='light'
+let g:airline_theme='sol'
+
+set background=light
 let g:solarized_termcolors=256
-colorscheme lucius
+colorscheme solarized
 
 " Use the vim wildmenu for command completion
 set wildmenu
@@ -224,9 +236,6 @@ map <leader>nt :NERDTreeToggle<CR>
 " Always display status line
 set laststatus=2
 
-" Auto populate the g:airline_symbols dictionary
-let g:airline_powerline_fonts = 1
-
 " Set mixed indent algorithm
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
 
@@ -254,7 +263,45 @@ nmap ]g :tabnext<return>
 "
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'css': ['stylelint'],
 \}
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-javascript
+"
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒ "
+
+set conceallevel=1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YouCompleteMe Configuration
+"
+" Completion enabled in comments
+let g:ycm_complete_in_comments = 1
+
+" Close the preivew window after we pick an option
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python3'
+
+autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
